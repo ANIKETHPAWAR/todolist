@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To DO List</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <header>To Do List</header>
+    <div class="page-container">
+      <form class="form-container">
+        <input type="text" class="todo-input" placeholder="Add a task" />
+        <button class="todo-btn" type="submit">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="select">
+          <select name="todos" id="" class="filter-todo">
+            <option value="all">All</option>
+            <option value="Completed">Completed</option>
+            <option value="Incomplete">Incomplete</option>
+          </select>
+        </div>
+      </form>
+      <div class="description1">
+        <textarea
+          class="taskdesc"
+          name=""
+          id=""
+          cols="20"
+          rows="8"
+          placeholder="Enter Your Task Description"
+        ></textarea>
+      </div>
+      <div class="todo-container">
+        <ul class="todolist"></ul>
+      </div>
+
+      <script src="./script.js"></script>
+    </div>
+  </body>
+</html>

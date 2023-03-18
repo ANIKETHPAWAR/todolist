@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: hsla(195, 100%, 72%, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    hsla(195, 100%, 72%, 1) 0%,
+    hsla(292, 100%, 83%, 1) 42%,
+    hsla(252, 56%, 76%, 1) 77%,
+    hsla(230, 74%, 70%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(195, 100%, 72%, 1) 0%,
+    hsla(292, 100%, 83%, 1) 42%,
+    hsla(252, 56%, 76%, 1) 77%,
+    hsla(230, 74%, 70%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(195, 100%, 72%, 1) 0%,
+    hsla(292, 100%, 83%, 1) 42%,
+    hsla(252, 56%, 76%, 1) 77%,
+    hsla(230, 74%, 70%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6fdbff", endColorstr="#f3a9ff", GradientType=1 );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  color: rgb(255, 74, 149);
+  font-family: "Libre Baskerville", serif;
+}
+header {
+  font-size: 4.5rem;
+}
+header,
+form {
+  max-width: 60vw;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 1rem;
+}
+form input,
+form button {
+  padding: 1rem;
+  font-size: 1.7rem;
+  border: none;
+  background: white;
+}
+form button {
+  color: white;
+  background: rgb(54, 184, 255);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+form button:hover {
+  color: cornflowerblue;
+  background: lightskyblue;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todolist {
+  width: 100%;
+  list-style: none;
+}
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: all 0.5s ease;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.todos li {
+  flex: 1;
+}
+.trash-btn,
+.complete-btn {
+  background: #facf5a;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  height: 100%;
+}
+.complete-btn {
+  background: rgb(54, 184, 255);
+}
+.complete-btn:hover {
+  color: cornflowerblue;
+  background: lightskyblue;
+}
+.trash-btn {
+  background: blueviolet;
+}
+.trash-btn:hover {
+  color: #ff00f7;
+  background: #d4a8e9;
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check-circle {
+  pointer-events: none;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+/*CUSTOM SELECTOR */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+.select {
+  margin: 1rem;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: #2a363b;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: rgb(54, 184, 255);
+  color: white;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+}
+
+.select:hover::after {
+  background: lightskyblue;
+  color: cornflowerblue;
+}
+
+.description1 {
+  /* height: 100%; */
+  min-width: 45%;
+  max-width: 38rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+textarea {
+  width: 70%;
+
+  display: flex;
+  justify-content: start;
+  max-height: 4rem;
+  text-transform: uppercase;
+  border-radius: 6px;
+  border: none;
+  padding: 1rem;
+}
+.description {
+  display: inline;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 2px;
+  background: rgb(255, 255, 255);
+}
+.page-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: linear-gradient(
+        to right,
+        rgba(147, 255, 250, 0.2),
+        rgb(214, 162, 218, 0.5)
+      ),
+      url(./images/mountain.jpeg) center/cover;
+    min-height: 100vh;
+  }
+}
